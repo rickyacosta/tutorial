@@ -10,3 +10,5 @@ always @ (posedge clk) begin
     else
         count <= count + 1'b1;
 end
+
+//test
