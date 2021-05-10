@@ -1,10 +1,12 @@
 module counter(
     input clk,
+    input rst,
     output reg[7:0] count
 )
 
-initial count = 0;
-
 always @ (posedge clk) begin
-    count <= count + 1'b1;
+    if(~rst)
+	count <= 8'h00;
+    else
+        count <= count + 1'b1;
 end
